@@ -21,8 +21,12 @@ struct Combination {
         }
     }
 
-    mint nCk(int n, int k) {
+    mint c(int n, int k) {
         if (k < 0 || n < k) return 0;
         return fact[n] * fact_inv[k] * fact_inv[n - k];
+    }
+
+    mint p(int n, int k) {
+        return fact[n] * fact_inv[n - k];
     }
 };
