@@ -16,6 +16,7 @@ struct Point {
     double cross(const Point& p) const {
         return x * p.y - y * p.x;
     }
+    // Sort by argument counterclockwise starting from the positive x-axis, excluding the origin.
     static bool arg_cmp(const Point& a, const Point& b) {
         auto half = [](const Point& p) {
             return p.y > 0 || (p.y == 0 && p.x > 0);
