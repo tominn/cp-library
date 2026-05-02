@@ -21,6 +21,7 @@ struct RollingHash {
         return;
     }
 
+    // Returns the hash of the half-open interval [l, r).
     Hash get(int l, int r) const {
         ll h1 = (hash[r].first - (hash[l].first * pow[r - l].first % MOD1) + MOD1) % MOD1;
         ll h2 = (hash[r].second - (hash[l].second * pow[r - l].second % MOD2) + MOD2) % MOD2;
