@@ -6,10 +6,10 @@ struct Combination {
         fact.resize(MAX);
         fact_inv.resize(MAX);
         inv.resize(MAX);
-        Build();
+        build();
     }
 
-    void Build() {
+    void build() {
         const int MOD = mint::mod();
         fact[0] = fact[1] = 1;
         fact_inv[0] = fact_inv[1] = 1;
